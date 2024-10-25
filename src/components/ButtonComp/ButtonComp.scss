@@ -1,0 +1,38 @@
+@import "../../shared/styles/variables.scss";
+
+.button {
+  background: $blue-gradient-theme;
+  color: $color-white;
+  padding: 12px 24px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.98;
+  &:hover {
+    opacity: 1;
+  }
+}
+.transparent-btn {
+  background: transparent !important;
+  color: $text-color-black !important;
+  position: relative;
+  border-radius: 8px;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 0.5px;
+    background: $blue-gradient-theme;
+    mask: linear-gradient($color-white 0 0) content-box,
+      linear-gradient($color-white 0 0);
+    -webkit-mask: linear-gradient($color-white 0 0) content-box,
+      linear-gradient($color-white 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+  }
+}
+.no-margin {
+  margin: 0 !important;
+}

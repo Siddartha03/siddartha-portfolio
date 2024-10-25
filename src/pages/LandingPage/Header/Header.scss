@@ -1,0 +1,130 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 90%;
+  height: 32px;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  color: #ffffff;
+  // background-color: #1a2a3e;
+  // color: #1a2a3e;
+  // font-weight: 600;
+  z-index: 399;
+  &__left {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+
+    &--company-wrap {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      white-space: nowrap;
+      gap: 12px;
+      img {
+        width: 32px;
+      }
+    }
+
+    &--options-wrap {
+      position: relative;
+      width: 120%;
+    }
+    &--options {
+      position: absolute;
+      // top: 6px;
+      text-align: start;
+      display: none;
+      overflow: hidden;
+      white-space: nowrap;
+      a {
+        margin-left: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+        color: #ffffff;
+        &:hover {
+          transform: scale(1.01, 1.01);
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+    &--options-opened {
+      animation: options 2s;
+      display: flex;
+      top: 2px;
+    }
+  }
+  &__right {
+    max-width: 20%;
+    cursor: pointer;
+    svg {
+      width: 1.3em;
+      height: 1.3em;
+    }
+  }
+}
+@keyframes options {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+// @keyframes options-closed {
+//   0% {
+//     left: 10%;
+//   }
+//   100% {
+//     left: 110%;
+//   }
+// }
+
+@media only screen and (max-width: 900px) {
+  .header-container__left--company-wrap {
+    img {
+      width: 28px;
+    }
+  }
+  .header-container__left--options-wrap {
+    top: 2px;
+  }
+  .header-container__right svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-container__left--company-wrap {
+    img {
+      width: 22px;
+    }
+    width: 10%;
+    gap: 4px;
+  }
+  .header-container__left--company-name {
+    display: none;
+  }
+  .header-container__left--options {
+    top: 1px;
+    a {
+      font-size: 13px;
+    }
+  }
+  .header-container__right {
+    position: relative;
+    top: 2px;
+  }
+  .header-container__right svg {
+    width: 1em;
+    height: 1em;
+  }
+}

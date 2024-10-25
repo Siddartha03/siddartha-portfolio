@@ -1,0 +1,84 @@
+@import "../../shared/styles/variables";
+
+img:last-of-type {
+  padding-left: 0;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 5rem;
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  section {
+    display: flex;
+    animation: swipe var(--speed) linear infinite backwards;
+  }
+  .company {
+    padding: 4px 16px;
+    margin: 0 8px;
+    border-radius: 6px;
+    color: $color-drak-grey;
+    background-color: $color-white;
+    display: flex !important;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    border: 1px solid $border-dark-grey;
+
+    img {
+      width: 40px;
+      margin-right: 8px;
+    }
+    span {
+      width: max-content !important;
+    }
+  }
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    .company {
+      padding: 4px 6px;
+      margin: 0 6px;
+      img {
+        width: 32px;
+        margin-right: 6px;
+      }
+      span {
+        width: max-content !important;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    .company {
+      padding: 2px 8px;
+      margin: 0 4px;
+      img {
+        width: 25px;
+        margin-right: 4px;
+      }
+      span {
+        width: max-content !important;
+        font-size: 14px;
+      }
+    }
+  }
+}

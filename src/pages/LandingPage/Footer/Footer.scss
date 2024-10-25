@@ -1,0 +1,219 @@
+@import "../../../shared/styles/variables";
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 6rem;
+  &__detail {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 8rem;
+    align-items: flex-start;
+    span,
+    p {
+      color: $text-dark-grey;
+      margin: 4px 0;
+    }
+    &--info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: start;
+
+      cursor: pointer;
+      strong:first-of-type,
+      p:first-of-type {
+        margin-bottom: 1.5rem;
+      }
+      p:first-of-type {
+        font-size: 12px;
+      }
+      strong {
+        color: $color-blue;
+      }
+    }
+    &--compony-name {
+      color: $text-color-black !important;
+      font-size: 24px;
+    }
+    &--input {
+      div {
+        display: flex;
+        gap: 1rem;
+
+        .MuiOutlinedInput-notchedOutline {
+          border-color: $color-blue;
+        }
+      }
+    }
+    &--social-media-logos {
+      margin-top: 16px;
+      svg {
+        margin-right: 8px;
+        fill: $color-blue;
+      }
+    }
+    .footer-animation-fourth {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s;
+    }
+    .footer-animation-third {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.3s;
+    }
+    .footer-animation-sec {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.6s;
+    }
+    .footer-animation-first {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.9s;
+    }
+  }
+  hr {
+    width: 100%;
+    height: 1px;
+    background: $blue-gradient-theme;
+    margin: 2rem 0;
+  }
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    strong a {
+      text-decoration: none;
+      color: $text-color-black;
+    }
+    &--detail {
+      display: flex;
+      gap: 1rem;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        span {
+          color: $text-dark-grey;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $text-dark-grey;
+        span {
+          display: flex;
+          gap: 4px;
+          svg {
+            fill: #25d366;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer-container {
+    padding: 4rem 2rem;
+  }
+  .footer-container__detail {
+    grid-template-columns: auto auto;
+    gap: 4rem;
+    .footer-animation-fourth {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.6s;
+    }
+    .footer-animation-third {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.9s;
+    }
+    .footer-animation-sec {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s;
+    }
+    .footer-animation-first {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.3s;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-container__detail {
+    grid-template-columns: auto;
+    .footer-animation-fourth {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.9s;
+    }
+    .footer-animation-third {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.6s;
+    }
+    .footer-animation-sec {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.3s;
+    }
+    .footer-animation-first {
+      left: -100vw;
+      position: relative;
+      transform: translate(100vw, 0);
+      transition-duration: 0.3s; /* Add the desired transition duration */
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s;
+    }
+  }
+  .footer-container__contact {
+    font-size: 12px;
+    flex-direction: column;
+    strong {
+      margin-bottom: 1rem;
+    }
+  }
+  .footer-container__contact--detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

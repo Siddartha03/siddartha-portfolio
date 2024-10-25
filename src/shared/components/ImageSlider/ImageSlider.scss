@@ -1,0 +1,145 @@
+@import "../../styles/variables";
+
+.section {
+  //   width: 90vw;
+  margin: 5rem auto;
+  margin-bottom: 0;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    // width: 95vw;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  background: $blue-gradient-theme;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600 !important;
+}
+.title h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.title span {
+  font-size: 0.85em;
+  color: var(--clr-primary-5);
+  margin-right: 1rem;
+  font-weight: 700;
+}
+.section-center {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 80vw;
+  /* have to have a height */
+  height: 450px;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.person-img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid var(--clr-grey-8);
+  box-shadow: var(--dark-shadow);
+}
+article h4 {
+  text-transform: uppercase;
+  color: hsl(21, 62%, 45%);
+  margin-bottom: 0.25rem;
+}
+.title {
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+  color: var(--clr-grey-3);
+}
+.text {
+  max-width: 35em;
+  margin: 0 auto;
+  margin-top: 2rem;
+  line-height: 2;
+  color: var(--clr-grey-5);
+  max-height: 128px;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+.icon {
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: var(--clr-primary-5);
+}
+.prev,
+.next {
+  position: absolute;
+  top: 182px;
+  padding: 0 4px !important;
+  transform: translateY(-50%);
+  background: $bg-header;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  svg {
+    fill: #fff;
+  }
+}
+.prev:hover,
+.next:hover {
+  background: hsl(21, 62%, 45%);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+@media only screen and (max-width: 600px) {
+  .text {
+    max-width: 45em;
+  }
+  .prev,
+  .next {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    svg {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--transition);
+}
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.lastSlide {
+  transform: translateX(-100%);
+}
+article.nextSlide {
+  transform: translateX(100%);
+}

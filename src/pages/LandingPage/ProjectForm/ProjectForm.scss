@@ -1,0 +1,84 @@
+@import "../../../shared/styles/variables";
+.pf-container {
+  background-color: $bg-light-grey5;
+  padding: 4rem;
+
+  &__title {
+    background: $blue-gradient-theme;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600 !important;
+    margin-bottom: 2rem !important;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 2rem 4rem;
+
+    &--input {
+      margin: 0.7rem 0 !important;
+      text-align: left;
+      display: flex !important;
+      align-items: baseline;
+      width: 100%;
+      div {
+        width: 100%;
+      }
+      .MuiFormHelperText-contained {
+        margin: 0 !important;
+      }
+      .mobile-input {
+        margin-right: 4px !important;
+        width: 10rem !important;
+      }
+      .text-area-input {
+        min-height: 6rem !important;
+        width: 98% !important;
+        resize: vertical;
+        &:focus-within {
+          border-color: rgb(25, 118, 210);
+          outline: rgb(25, 118, 210);
+          outline-width: 2px;
+          border: 1px solid rgb(25, 118, 210);
+        }
+      }
+    }
+    &--submit-btn {
+      margin-top: 0.7rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .pf-container {
+    padding: 2rem;
+  }
+  .pf-container__content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .pf-container {
+    padding: 1rem;
+    &__map {
+      iframe {
+        width: -webkit-fill-available;
+      }
+    }
+  }
+  .pf-container__form {
+    padding: 2rem 2rem;
+  }
+  .pf-container__content {
+    flex-direction: column;
+  }
+}

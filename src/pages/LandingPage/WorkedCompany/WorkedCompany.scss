@@ -1,0 +1,41 @@
+@import "../../../shared/styles/variables";
+
+.wc-container {
+  background-color: $bg-dark-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 1rem 2px 4rem;
+  width: 100%;
+  &__title {
+    background: $blue-gradient-theme;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 12px 0 !important;
+    font-weight: 600 !important;
+  }
+
+  &__counters {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .wc-container {
+    &__counters {
+      flex-direction: column;
+    }
+  }
+}

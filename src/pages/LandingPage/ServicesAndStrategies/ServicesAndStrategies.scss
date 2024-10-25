@@ -68,8 +68,7 @@
         border-radius: 4px;
         padding: 0.5px;
         background: $blue-gradient-theme;
-        mask: linear-gradient($color-white 0 0) content-box,
-          linear-gradient($color-white 0 0);
+        mask: linear-gradient($color-white 0 0) content-box, linear-gradient($color-white 0 0);
         -webkit-mask: linear-gradient($color-white 0 0) content-box,
           linear-gradient($color-white 0 0);
         mask-composite: exclude;
@@ -89,7 +88,7 @@
         margin-top: 0;
         overflow: hidden;
         text-overflow: ellipsis;
-        -webkit-line-clamp: 2;
+        // -webkit-line-clamp: 2;
         display: -webkit-box;
         -webkit-box-orient: vertical;
       }
@@ -260,8 +259,8 @@
       justify-content: center;
       gap: 12px;
       padding: 12px;
-      max-height: 576px;
-      overflow: auto;
+      // max-height: 576px;
+      // overflow: auto;
       &--content {
         h3 {
           font-size: large;

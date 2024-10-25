@@ -11,14 +11,21 @@ import "./Header.scss";
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     const handleScroll = () => {
       const threshold = 50;
       setScrolling(window.scrollY > threshold);
     };
     window.addEventListener("scroll", handleScroll);
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -26,18 +33,21 @@ const Header = () => {
     backgroundColor: scrolling ? "#1A2A3E" : "rgba(26, 42, 62, 0.9)", // Change to the desired colors
     transition: "background-color 0.3s ease", // Add a smooth transition
   };
+
   return (
     <div className="header-container" style={headerStyle}>
       <div className="header-container__left">
         <div className="header-container__left--company-wrap">
           <img src={logo} alt="madhuvan_digitals" />
-          <Typography
-            variant="h3"
-            sx={{ fontSize: header.companyNameFS }}
-            className="header-container__left--company-name"
-          >
-            Pathakamuri Siddartha's Portfolio
-          </Typography>
+          {((isMenuOpen && screenWidth > 600) || !isMenuOpen) && (
+            <Typography
+              variant="h3"
+              sx={{ fontSize: header.companyNameFS, mt: 0.5 }}
+              className="header-container__left--company-name"
+            >
+              Pathakamuri Siddartha's Portfolio
+            </Typography>
+          )}
         </div>
         <div className="header-container__left--options-wrap">
           <div

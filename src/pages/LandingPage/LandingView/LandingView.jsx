@@ -62,15 +62,15 @@ const LandingView = () => {
           className={inViewTitle ? "title-animation" : ""}
         >
           Experienced Full Stack Web Developer with 4 years of expertise in technologies such as
-          React.js, Next.js, Node.js and Angular. Successfully delivered impactful solutions across
-          5 client projects.
+          React, Next.js, React Native, Node.js and Angular. Successfully delivered impactful
+          solutions across 5 client projects.
         </Typography>
         <div className="lv-container__heading--resume-download-btn">
           <ButtonComp
             text="Download Resume"
             onClickEvent={() => {
               window.open(
-                "https://drive.google.com/file/d/1yffbNbZ8y2PgM4uZRf5sf2451yosKJMb/view?usp=sharing",
+                "https://drive.google.com/file/d/1fQ7Pz-pcdyJiJJQxCzClqwr4TP0n_hjH/view?usp=sharing",
                 "_blank"
               );
             }}

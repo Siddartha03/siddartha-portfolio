@@ -19,9 +19,9 @@ const OurWork = () => {
           Projects Worked Upon
         </Typography>
         <p className="ow-container__info--sub-title">
-          I have contributed to numerous projects utilizing React.js, Next.js, Node.js, and Angular.
-          Some of these projects are showcased here. To view my GitHub profile, please click the
-          button below.
+          I have contributed to numerous projects utilizing React, Next.js, React Native Node.js,
+          and Angular. Some of these projects are showcased here. To view my GitHub profile, please
+          click the button below.
         </p>
         <ButtonComp
           text="Github Profile"

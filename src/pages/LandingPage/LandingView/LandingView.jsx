@@ -70,7 +70,7 @@ const LandingView = () => {
             text="Download Resume"
             onClickEvent={() => {
               window.open(
-                "https://drive.google.com/file/d/1fQ7Pz-pcdyJiJJQxCzClqwr4TP0n_hjH/view?usp=sharing",
+                "https://drive.google.com/file/d/1cx62DmXbPuQd8187bBLBj4i2cpcMV1zM/view?usp=sharing",
                 "_blank"
               );
             }}
